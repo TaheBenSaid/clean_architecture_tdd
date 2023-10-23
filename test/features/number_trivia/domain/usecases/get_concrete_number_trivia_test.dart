@@ -8,9 +8,12 @@ import 'package:mockito/annotations.dart';
 
 import 'get_concrete_number_trivia_test.mocks.dart';
 
-@GenerateMocks([NumberTriviaRepository], customMocks: [
+@GenerateMocks([
+  NumberTriviaRepository
+], customMocks: [
   MockSpec<NumberTriviaRepository>(
-    as: #MockNumberTriviaRepositoryForTest,),
+    as: #MockNumberTriviaRepositoryForTest,
+  ),
 ])
 
 void main() {
@@ -34,7 +37,7 @@ void main() {
       // act
       final result = await usecase.execute(number: tNumber);
       // assert
-      expect(result,equals (Right(tNumberTrivia)));
+      expect(result, equals(Right(tNumberTrivia)));
       verify(mockNumberTriviaRepository.getConcreteNumberTrivia(tNumber));
       verifyNoMoreInteractions(mockNumberTriviaRepository);
     },
