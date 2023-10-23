@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../fixtures/fixture.dart';
 
 void main() {
-  final tNumberTriviaModel = NumberTriviaModel(number: 1, text: "test text");
+  final tNumberTriviaModel = NumberTriviaModel(number: 1, text: "Test Text");
   
   test(
     "should be a subclass of NumberTriva entity",
@@ -62,3 +62,4 @@ void main() {
     );
   });
 }
+
